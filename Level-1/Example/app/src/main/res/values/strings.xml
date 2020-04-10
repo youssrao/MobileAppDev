@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MAD Level 1 Example</string>
+    <string name="kind_of_animal">What kind of animal is this?</string>
+    <string name="species">Species</string>
+    <string name="btnConfirm">Confirm</string>
+    <string name="giraffe">Giraffe</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect, the correct answer is Giraffe!</string>
 </resources>

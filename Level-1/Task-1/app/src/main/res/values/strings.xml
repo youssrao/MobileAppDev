@@ -6,4 +6,6 @@
     <string name="btnHigher">Higher</string>
     <string name="last_throw">Last Throw: %d</string>
     <string name="dice_image">Dice Image</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect!</string>
 </resources>

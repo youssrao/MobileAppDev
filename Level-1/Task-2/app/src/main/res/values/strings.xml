@@ -8,4 +8,7 @@
     <string name="a_b">A^B</string>
     <string name="submit">Submit</string>
     <string name="answer">Answer</string>
+    <string name="emptyAnswers">You haven\'t filled every answer in!</string>
+    <string name="correctAnswers">You\'re right! Good job!</string>
+    <string name="incorrectAnswers">Your answer is wrong :(</string>
 </resources>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MAD Level 1 Task 2</string>
+    <string name="conjunction_title">Conjunction (AND)</string>
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="T">T</string>
+    <string name="F">F</string>
+    <string name="a_b">A^B</string>
+    <string name="submit">Submit</string>
+    <string name="answer">Answer</string>
 </resources>

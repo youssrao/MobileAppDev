@@ -132,33 +132,33 @@
         android:layout_width="163dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/answer"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/BT1"
-        app:layout_constraintEnd_toEndOf="@+id/input2"
-        android:importantForAutofill="no" />
+        app:layout_constraintEnd_toEndOf="@+id/input2" />
 
     <EditText
         android:id="@+id/input2"
         android:layout_width="163dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/answer"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/BF1"
-        app:layout_constraintEnd_toEndOf="@+id/input3"
-        android:importantForAutofill="no" />
+        app:layout_constraintEnd_toEndOf="@+id/input3" />
 
     <EditText
         android:id="@+id/input3"
         android:layout_width="163dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/answer"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/BF2"
-        app:layout_constraintEnd_toEndOf="@+id/input4"
-        android:importantForAutofill="no" />
+        app:layout_constraintEnd_toEndOf="@+id/input4" />
 
     <EditText
         android:id="@+id/input4"
@@ -166,11 +166,20 @@
         android:layout_height="45dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
-        android:importantForAutofill="no"
         android:hint="@string/answer"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/BT2"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="@+id/input4"
+        app:layout_constraintStart_toStartOf="@+id/AF2"
+        app:layout_constraintTop_toBottomOf="@+id/input4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

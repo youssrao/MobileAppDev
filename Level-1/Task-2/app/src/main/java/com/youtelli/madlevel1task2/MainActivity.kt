@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
 import com.youtelli.madlevel1task2.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,11 +17,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        checkAnswer()
+        button.setOnClickListener {
+            checkAnswer()
+        }
+
+
     }
 
 
-    
+
     fun checkAnswer() {
         var input1 = findViewById<EditText>(R.id.input1)
         var input2 = findViewById<EditText>(R.id.input2)

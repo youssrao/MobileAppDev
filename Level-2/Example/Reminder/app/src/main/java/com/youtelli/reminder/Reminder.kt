@@ -1,7 +1,7 @@
 package com.youtelli.reminder
 
-data class Reminder {
+data class Reminder(
 
     var reminderText: String
 
-}
+)

@@ -40,3 +40,4 @@ class ReminderAdapter(private val reminders: List<Reminder>) : RecyclerView.Adap
 
 
     }
+}

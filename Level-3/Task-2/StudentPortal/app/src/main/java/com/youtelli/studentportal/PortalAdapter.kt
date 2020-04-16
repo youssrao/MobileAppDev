@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_portal.view.*
 
+
 class PortalAdapter(): RecyclerView.Adapter<PortalAdapter.ViewHolder>() {
 
     companion object {
@@ -26,9 +27,10 @@ class PortalAdapter(): RecyclerView.Adapter<PortalAdapter.ViewHolder>() {
             itemView.tvTitle.text = portal.title
             itemView.tvURL.text = portal.url
 
-            itemView.setOnClickListener {view ->
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(itemView.tvURL.text.toString()))
-                startActivity(view.context, browserIntent, null)
+            itemView.setOnClickListener { _ ->
+                val openURL = Intent(Intent.ACTION_VIEW)
+                openURL.data = Uri.parse(itemView.tvURL.text.toString())
+                startActivity(itemView.context, openURL, null)
             }
         }
     }

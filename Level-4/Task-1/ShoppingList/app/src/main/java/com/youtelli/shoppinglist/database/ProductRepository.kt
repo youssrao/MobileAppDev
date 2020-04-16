@@ -1,7 +1,7 @@
-package com.youtelli.shoppinglist
+package com.youtelli.shoppinglist.database
 
 import android.content.Context
-import com.youtelli.shoppinglist.Product
+import com.youtelli.shoppinglist.model.Product
 
 class ProductRepository(context: Context) {
 
@@ -9,7 +9,9 @@ class ProductRepository(context: Context) {
 
     init {
         val database =
-            ShoppingListRoomDatabase.getDatabase(context)
+            ShoppingListRoomDatabase.getDatabase(
+                context
+            )
         productDao = database!!.productDao()
     }
 

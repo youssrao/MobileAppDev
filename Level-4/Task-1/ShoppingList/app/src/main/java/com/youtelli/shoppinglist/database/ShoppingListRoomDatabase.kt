@@ -1,10 +1,10 @@
-package com.youtelli.shoppinglist
+package com.youtelli.shoppinglist.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.youtelli.shoppinglist.Product
+import com.youtelli.shoppinglist.model.Product
 
 @Database(entities = [Product::class], version = 1, exportSchema = false)
 abstract class ShoppingListRoomDatabase : RoomDatabase() {

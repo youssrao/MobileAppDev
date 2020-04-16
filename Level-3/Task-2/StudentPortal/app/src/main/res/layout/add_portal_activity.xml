@@ -10,12 +10,15 @@
         android:id="@+id/tilTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+
+        android:background="@color/background_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etTitle"
+            android:textColor="@color/white_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/title" />
@@ -23,14 +26,17 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUrl"
+        android:textColor="@color/white_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/background_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilTitle"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etUrl"
+            android:textColor="@color/white_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/url" />
@@ -38,12 +44,14 @@
 
     <Button
         android:id="@+id/btnAddPortal"
+        android:textColor="@color/white_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/add_portal"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
+        android:background="@color/background_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

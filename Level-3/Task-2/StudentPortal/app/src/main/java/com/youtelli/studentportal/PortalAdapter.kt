@@ -5,8 +5,10 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.item_portal.view.*
 
 
@@ -28,9 +30,13 @@ class PortalAdapter(): RecyclerView.Adapter<PortalAdapter.ViewHolder>() {
             itemView.tvURL.text = portal.url
 
             itemView.setOnClickListener { _ ->
-                val openURL = Intent(Intent.ACTION_VIEW)
-                openURL.data = Uri.parse(itemView.tvURL.text.toString())
-                startActivity(itemView.context, openURL, null)
+                if (itemView.tvURL.text.toString().startsWith("http://")) {
+                    val openURL = Intent(Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse(itemView.tvURL.text.toString())
+                    startActivity(itemView.context, openURL, null)
+                } else {
+                    Snackbar.make(itemView, "Not a valid url!", Snackbar.LENGTH_SHORT).show()
+                }
             }
         }
     }

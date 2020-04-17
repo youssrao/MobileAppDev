@@ -3,6 +3,7 @@ package com.youtelli.studentportal
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import kotlinx.android.synthetic.main.all_portals.*
@@ -29,7 +30,7 @@ class AllPortalsActivity : AppCompatActivity() {
 
         // Create list
         rvPortal.apply {
-            layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+            layoutManager = GridLayoutManager(this@AllPortalsActivity, 2, GridLayoutManager.VERTICAL, false)
             adapter = portalAdapter
         }
     }

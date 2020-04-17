@@ -1,6 +1,7 @@
-package com.youtelli.rockpaperscissors
+package com.youtelli.rockpaperscissors.database
 
 import android.content.Context
+import com.youtelli.rockpaperscissors.model.Game
 
 class GameRepository (context: Context){
     private var gameDao: GameDao

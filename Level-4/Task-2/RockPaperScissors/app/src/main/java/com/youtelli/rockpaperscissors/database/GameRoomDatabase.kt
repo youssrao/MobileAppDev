@@ -1,10 +1,10 @@
-package com.youtelli.rockpaperscissors
+package com.youtelli.rockpaperscissors.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.youtelli.rockpaperscissors.Game
+import com.youtelli.rockpaperscissors.model.Game
 
 @Database(entities = [Game::class], version = 1, exportSchema = false)
 abstract class GameRoomDatabase : RoomDatabase(){
@@ -23,7 +23,8 @@ abstract class GameRoomDatabase : RoomDatabase(){
                     if (gameRoomDatabaseInstance == null) {
                         gameRoomDatabaseInstance = Room.databaseBuilder(
                             context.applicationContext,
-                            GameRoomDatabase::class.java, DATABASE_NAME
+                            GameRoomDatabase::class.java,
+                            DATABASE_NAME
                         )
                             .allowMainThreadQueries()
                             .build()

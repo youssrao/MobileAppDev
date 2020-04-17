@@ -1,4 +1,4 @@
-package com.youtelli.rockpaperscissors
+package com.youtelli.rockpaperscissors.model
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

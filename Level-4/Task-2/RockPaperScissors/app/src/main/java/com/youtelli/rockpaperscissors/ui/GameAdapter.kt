@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.youtelli.rockpaperscissors.R
 import com.youtelli.rockpaperscissors.model.Game
+import kotlinx.android.synthetic.main.content_main.view.*
 import kotlinx.android.synthetic.main.item_game.view.*
 
 
@@ -16,6 +17,18 @@ class GameAdapter (private val games: List<Game>) : RecyclerView.Adapter<GameAda
         fun bind(game: Game) {
             itemView.tvResult.text = game.gameResult
             itemView.tvTime.text = game.gameTime
+
+            when (game.gameComputer) {
+                ROCK -> {
+                    itemView.computerChoice.setImageResource(R.drawable.rock)
+                }
+            }
+
+            when (game.gameHuman) {
+                ROCK -> {
+                    itemView.humanChoice.setImageResource(R.drawable.rock)
+                }
+            }
 
 
         }

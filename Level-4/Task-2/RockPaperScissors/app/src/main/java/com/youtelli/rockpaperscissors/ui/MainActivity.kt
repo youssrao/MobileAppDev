@@ -96,9 +96,7 @@ class MainActivity : AppCompatActivity() {
 
         choiceHuman = humanChoice
 
-        val randomNumber = (1..3).random()
-
-        when (randomNumber) {
+        when ((1..3).random()) {
             1 -> {
                 choiceComputer = PAPER
                 imageComputer.setImageResource(R.drawable.paper)

@@ -49,14 +49,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun getShoppingListFromDatabase() {
         mainScope.launch {
-            val shoppingList = withContext(Dispatchers.IO) {
+            val shoppingList =
                 productRepository.getAllProducts()
             }
             this@MainActivity.shoppingList.clear()
             this@MainActivity.shoppingList.addAll(shoppingList)
             this@MainActivity.productAdapter.notifyDataSetChanged()
         }
-    }
+
 
     private fun validateFields(): Boolean {
         return if (etProduct.text.toString().isNotBlank() && etQuantity.text.toString().isNotBlank()) {

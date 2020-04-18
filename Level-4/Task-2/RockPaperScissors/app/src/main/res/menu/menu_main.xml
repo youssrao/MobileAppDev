@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.youtelli.rockpaperscissors.ui.MainActivity">
+
+    <item
+        android:id="@+id/action_get_history"
+        android:icon="@drawable/ic_history_white_24dp"
+        app:showAsAction="always"
+        android:title="@string/title_activity_history" />
+    </menu>
+

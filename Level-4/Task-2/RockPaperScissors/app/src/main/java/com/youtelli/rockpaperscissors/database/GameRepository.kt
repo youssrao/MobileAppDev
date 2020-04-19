@@ -2,7 +2,6 @@ package com.youtelli.rockpaperscissors.database
 
 import android.content.Context
 import com.youtelli.rockpaperscissors.model.Game
-import com.youtelli.rockpaperscissors.model.Statistics
 
 class GameRepository (context: Context){
     private var gameDao: GameDao
@@ -28,12 +27,6 @@ class GameRepository (context: Context){
     suspend fun updateGame(game: Game) {
         gameDao.updateGame(game)
     }
-
-    suspend fun getStatistics(): List<Statistics> {
-        return gameDao.getStatistics()
-    }
-
-
 
 
 }

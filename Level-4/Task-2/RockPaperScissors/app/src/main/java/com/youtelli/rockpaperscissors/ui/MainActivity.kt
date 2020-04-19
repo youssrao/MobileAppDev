@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
         val timeStamp = ZonedDateTime.now()
         val format =  DateTimeFormatter.RFC_1123_DATE_TIME
 
-        games.add(Game(result, format.format(timeStamp).toString() ,choiceHuman, choiceComputer, 0, 0))
+        games.add(Game(result, format.format(timeStamp).toString() ,choiceHuman, choiceComputer))
 
 
     }

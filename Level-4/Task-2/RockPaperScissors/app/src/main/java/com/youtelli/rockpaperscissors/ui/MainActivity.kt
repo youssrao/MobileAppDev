@@ -3,20 +3,28 @@ package com.youtelli.rockpaperscissors.ui
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.youtelli.rockpaperscissors.R
 import com.youtelli.rockpaperscissors.database.GameRepository
 import com.youtelli.rockpaperscissors.model.Game
 import kotlinx.android.synthetic.main.activity_history.*
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.item_game.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 const val ROCK = "rock"
@@ -92,6 +100,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun game(humanChoice: String) {
 
         choiceHuman = humanChoice
@@ -138,7 +147,10 @@ class MainActivity : AppCompatActivity() {
 
         textResult.text = result
 
-        games.add(Game(result, "" ,choiceHuman, choiceComputer))
+        val timeStamp = ZonedDateTime.now()
+        val format =  DateTimeFormatter.RFC_1123_DATE_TIME
+
+        games.add(Game(result, format.format(timeStamp).toString() ,choiceHuman, choiceComputer))
 
 
     }

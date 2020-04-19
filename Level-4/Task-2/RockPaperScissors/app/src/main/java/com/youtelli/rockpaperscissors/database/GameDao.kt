@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.youtelli.rockpaperscissors.model.Game
+import com.youtelli.rockpaperscissors.model.Statistics
 
 @Dao
 interface GameDao {
@@ -20,6 +21,9 @@ interface GameDao {
 
     @Update
     suspend fun updateGame(game: Game)
+
+    @Query("SELECT stats, COUNT(stats) AS total FROM gameTable")
+    suspend fun getStatistics(): List<Statistics>
 
 
 }

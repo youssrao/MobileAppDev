@@ -7,6 +7,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toolbar
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var choiceComputer: String
     private lateinit var choiceHuman: String
     private lateinit var result: String
+    private var stats = 0
     private val mainScope = CoroutineScope(Dispatchers.Main)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         buttonScissors.setOnClickListener {
             threwScissors()
         }
+
     }
 
     private fun getGamesFromDatabase() {
@@ -80,20 +83,26 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun threwRock() {
         imageUser.setImageResource(R.drawable.rock)
         game(ROCK)
+        getStatistics(ROCK)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun threwScissors() {
         imageUser.setImageResource(R.drawable.scissors)
         game(SCISSORS)
+        getStatistics(SCISSORS)
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun threwPaper() {
         imageUser.setImageResource(R.drawable.paper)
         game(PAPER)
+        getStatistics(PAPER)
 
     }
 
@@ -145,12 +154,46 @@ class MainActivity : AppCompatActivity() {
 
         textResult.text = result
 
+
+
         val timeStamp = ZonedDateTime.now()
         val format =  DateTimeFormatter.RFC_1123_DATE_TIME
 
-        games.add(Game(result, format.format(timeStamp).toString() ,choiceHuman, choiceComputer, 0))
+        games.add(Game(result, format.format(timeStamp).toString() ,choiceHuman, choiceComputer, stats))
 
 
+    }
+
+    private fun getStatistics(result: String) {
+        mainScope.launch {
+            val gameStats = withContext(Dispatchers.IO) {
+                gameRepository.getStatistics()
+            }
+
+            when (result) {
+                WON -> {
+                    stats = 0
+                }
+                DRAW -> {
+                    stats = 1
+                }
+                LOST -> {
+                    stats = 2
+                }
+            }
+
+            var win = 0
+            var draw = 0
+            var lose = 0
+            for (stat in gameStats) {
+                if (stat.stats == 0) { win = stat.total }
+                if (stat.stats == 1) { draw = stat.total }
+                if (stat.stats == 2) { lose = stat.total }
+            }
+
+
+            tvStats.text = getString(R.string.stats, win, draw, lose)
+        }
     }
 
     @SuppressLint("MissingSuperCall")

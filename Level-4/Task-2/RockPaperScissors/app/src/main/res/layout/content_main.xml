@@ -149,17 +149,20 @@
         android:id="@+id/allTimeStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
         android:text="@string/your_all_time_statistics"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintHorizontal_bias="0.494"/>
 
     <TextView
-        android:id="@+id/stats"
+        android:id="@+id/tvStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="@string/stats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allTimeStats"
+        app:layout_constraintHorizontal_bias="0.494"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

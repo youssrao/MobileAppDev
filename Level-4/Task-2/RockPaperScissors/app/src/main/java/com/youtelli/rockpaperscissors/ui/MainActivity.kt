@@ -22,7 +22,6 @@ import kotlinx.coroutines.withContext
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
-//TODO: - fix issue with toolbar not displaying in activity_main.xml
 //TODO: - display all time statistics
 //TODO: - line between subtitle and actual game
 

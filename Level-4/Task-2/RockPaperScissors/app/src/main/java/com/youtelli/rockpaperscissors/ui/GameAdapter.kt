@@ -22,11 +22,23 @@ class GameAdapter (private val games: List<Game>) : RecyclerView.Adapter<GameAda
                 ROCK -> {
                     itemView.computerChoice.setImageResource(R.drawable.rock)
                 }
+                PAPER -> {
+                    itemView.computerChoice.setImageResource(R.drawable.paper)
+                }
+                SCISSORS -> {
+                    itemView.computerChoice.setImageResource(R.drawable.scissors)
+                }
             }
 
             when (game.gameHuman) {
                 ROCK -> {
                     itemView.humanChoice.setImageResource(R.drawable.rock)
+                }
+                PAPER -> {
+                    itemView.humanChoice.setImageResource(R.drawable.paper)
+                }
+                SCISSORS -> {
+                    itemView.humanChoice.setImageResource(R.drawable.scissors)
                 }
             }
 

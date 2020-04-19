@@ -26,4 +26,6 @@
     <string name="delete">delete</string>
     <string name="vr_17_april_2020">vr 17 april 2020</string>
     <string name="computer_wins">Computer Wins</string>
+    <string name="your_all_time_statistics">Your all time statistics</string>
+    <string name="stats">Win: %d, Draw: %d, Lose: %d</string>
 </resources>

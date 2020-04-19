@@ -79,10 +79,11 @@
         android:id="@+id/textResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="104dp"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
@@ -91,7 +92,7 @@
         android:layout_width="94dp"
         android:layout_height="113dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:background="#13564b"
         android:contentDescription="@string/computerImage"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/computerName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageComputer" />
@@ -113,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="serif"
         android:text="@string/textVS"
         android:textSize="36sp"
@@ -122,9 +123,9 @@
 
     <ImageView
         android:id="@+id/imageUser"
-        android:layout_width="110dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="94dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="60dp"
         android:background="#13564b"
         android:contentDescription="@string/imageUser"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,10 +138,28 @@
         android:id="@+id/textUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="@string/textUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.734"
         app:layout_constraintStart_toEndOf="@+id/textComputer"
         app:layout_constraintTop_toBottomOf="@+id/imageUser" />
+
+    <TextView
+        android:id="@+id/allTimeStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:text="@string/your_all_time_statistics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="102dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

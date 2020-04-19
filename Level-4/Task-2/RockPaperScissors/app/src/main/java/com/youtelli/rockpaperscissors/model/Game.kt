@@ -18,6 +18,9 @@ data class Game (
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var id: Long? = null
+    var id: Long? = null,
+
+    @ColumnInfo(name = "stats")
+    var stats: Int
 
 ) : Parcelable

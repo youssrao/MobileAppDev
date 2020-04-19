@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.youtelli.rockpaperscissors.model.Game
 
-@Database(entities = [Game::class], version = 1, exportSchema = false)
+@Database(entities = [Game::class], version = 2, exportSchema = false)
 abstract class GameRoomDatabase : RoomDatabase(){
 
     abstract fun gameDao(): GameDao

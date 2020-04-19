@@ -13,13 +13,13 @@ interface GameDao {
     suspend fun getAllGames(): List<Game>
 
     @Insert
-    suspend fun insertGame(reminder: Game)
+    suspend fun insertGame(game: Game)
 
     @Query("DELETE FROM gameTable")
     fun deleteGame()
 
     @Update
-    suspend fun updateGame(reminder: Game)
+    suspend fun updateGame(game: Game)
 
 
 }

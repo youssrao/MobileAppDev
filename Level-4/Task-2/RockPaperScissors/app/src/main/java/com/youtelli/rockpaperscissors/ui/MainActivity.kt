@@ -22,6 +22,11 @@ import kotlinx.coroutines.withContext
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
+//TODO: - fix issue with toolbar not displaying in activity_main.xml
+//TODO: - display all time statistics
+//TODO: - fix issue with history_content too much space between games stored
+//TODO: - line between subtitle and actual game
+
 
 const val ROCK = "rock"
 const val PAPER = "paper"

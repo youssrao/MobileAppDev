@@ -23,7 +23,6 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
 //TODO: - display all time statistics
-//TODO: - line between subtitle and actual game
 
 
 const val ROCK = "rock"

@@ -154,6 +154,17 @@ class MainActivity : AppCompatActivity() {
 
         textResult.text = result
 
+        when (result) {
+            WON -> {
+                getStatistics(WON)
+            }
+            DRAW -> {
+                getStatistics(DRAW)
+            }
+            LOST -> {
+                getStatistics(LOST)
+            }
+        }
 
 
         val timeStamp = ZonedDateTime.now()
@@ -186,15 +197,27 @@ class MainActivity : AppCompatActivity() {
             var draw = 0
             var lose = 0
             for (stat in gameStats) {
-                if (stat.stats == 0) { win = stat.total }
-                if (stat.stats == 1) { draw = stat.total }
-                if (stat.stats == 2) { lose = stat.total }
+                if (stat.stats == 0) {
+                    win = stat.total
+                }
+                if (stat.stats == 1) {
+                    draw = stat.total
+                }
+                if (stat.stats == 2) {
+                    lose = stat.total
+                }
             }
 
 
             tvStats.text = getString(R.string.stats, win, draw, lose)
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+        games.clear()
+    }
+
 
     @SuppressLint("MissingSuperCall")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
